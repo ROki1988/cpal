@@ -149,7 +149,7 @@ mod cpal_impl;
 #[path = "coreaudio/mod.rs"]
 mod cpal_impl;
 
-#[cfg(target_os = "emscripten")]
+#[cfg(any(target_os = "emscripten", target_os = "wasm32"))]
 #[path = "emscripten/mod.rs"]
 mod cpal_impl;
 
